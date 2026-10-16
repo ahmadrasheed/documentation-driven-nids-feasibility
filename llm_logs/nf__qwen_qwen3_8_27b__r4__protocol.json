@@ -1,0 +1,14 @@
+{
+ "model": "qwen/qwen3.8-27b",
+ "text": "\n\n{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] != 6) & (df['TCP_FLAGS'] == 0)\",\"(df['PROTOCOL'] != 6) & (df['CLIENT_TCP_FLAGS'] == 0)\",\"(df['PROTOCOL'] != 6) & (df['SERVER_TCP_FLAGS'] == 0)\"],\"features\":[\"PROTOCOL\",\"TCP_FLAGS\",\"CLIENT_TCP_FLAGS\",\"SERVER_TCP_FLAGS\"],\"rationale\":\"TCP flags are only defined for TCP (protocol 6); for all other IP protocols the cumulative flag counters must be zero.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] != 6) & (df['RETRANSMITTED_IN_BYTES'] == 0)\",\"(df['PROTOCOL'] != 6) & (df['RETRANSMITTED_IN_PKTS'] == 0)\",\"(df['PROTOCOL'] != 6) & (df['RETRANSMITTED_OUT_BYTES'] == 0)\",\"(df['PROTOCOL'] != 6) & (df['RETRANSMITTED_OUT_PKTS'] == 0)\"],\"features\":[\"PROTOCOL\",\"RETRANSMITTED_IN_BYTES\",\"RETRANSMITTED_IN_PKTS\",\"RETRANSMITTED_OUT_BYTES\",\"RETRANSMITTED_OUT_PKTS\"],\"rationale\":\"Retransmission is a TCP-specific mechanism; for non-TCP flows all retransmitted byte and packet counters must be zero.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] != 6) & (df['TCP_WIN_MAX_IN'] == 0)\",\"(df['PROTOCOL'] != 6) & (df['TCP_WIN_MAX_OUT'] == 0)\"],\"features\":[\"PROTOCOL\",\"TCP_WIN_MAX_IN\",\"TCP_WIN_MAX_OUT\"],\"rationale\":\"TCP window size is only defined in the TCP header; for non-TCP flows the max window fields must be zero.\"},{\"id\":\"R4\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] != 1) & (df['ICMP_TYPE'] == 0)\",\"(df['PROTOCOL'] != 1) & (df['ICMP_IPV4_TYPE'] == 0)\"],\"features\":[\"PROTOCOL\",\"ICMP_TYPE\",\"ICMP_IPV4_TYPE\"],\"rationale\":\"ICMP type and code fields are only defined for ICMP (protocol 1); for all other protocols they must be zero.\"},{\"id\":\"R5\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] != 17) & (df['DNS_QUERY_ID'] == 0)\",\"(df['PROTOCOL'] != 17) & (df['DNS_QUERY_TYPE'] == 0)\",\"(df['PROTOCOL'] != 17) & (df['DNS_TTL_ANSWER'] == 0)\"],\"features\":[\"PROTOCOL\",\"DNS_QUERY_ID\",\"DNS_QUERY_TYPE\",\"DNS_TTL_ANSWER\"],\"rationale\":\"DNS query fields are only defined for DNS traffic (UDP protocol 17); for non-UDP flows they must be zero.\"},{\"id\":\"R6\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] != 6) & (df['FTP_COMMAND_RET_CODE'] == 0)\"],\"features\":[\"PROTOCOL\",\"FTP_COMMAND_RET_CODE\"],\"rationale\":\"FTP command return codes are only defined for FTP sessions which run over TCP (protocol 6); for non-TCP flows the field must be zero.\"}]}",
+ "attempts": [
+  {
+   "provider": "Phala",
+   "finish_reason": "stop",
+   "completion_tokens": 805,
+   "prompt_tokens": 2160,
+   "cost_usd": 0.001595775,
+   "seconds": 12.8
+  }
+ ]
+}

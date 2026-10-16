@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['ct_srv_src'] <= df['ct_src_ltm'])\"],\"features\":[\"ct_srv_src\",\"ct_src_ltm\"],\"rationale\":\"Connections sharing both a service and source address are a subset of connections sharing that source address.\"},{\"id\":\"R2\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['ct_srv_dst'] <= df['ct_dst_ltm'])\"],\"features\":[\"ct_srv_dst\",\"ct_dst_ltm\"],\"rationale\":\"Connections sharing both a service and destination address are a subset of connections sharing that destination address.\"},{\"id\":\"R3\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['ct_src_dport_ltm'] <= df['ct_src_ltm'])\"],\"features\":[\"ct_src_dport_ltm\",\"ct_src_ltm\"],\"rationale\":\"Connections sharing both a source address and destination port are a subset of connections sharing that source address.\"},{\"id\":\"R4\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['ct_dst_sport_ltm'] <= df['ct_dst_ltm'])\"],\"features\":[\"ct_dst_sport_ltm\",\"ct_dst_ltm\"],\"rationale\":\"Connections sharing both a destination address and source port are a subset of connections sharing that destination address.\"},{\"id\":\"R5\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['ct_dst_src_ltm'] <= df['ct_src_ltm'])\"],\"features\":[\"ct_dst_src_ltm\",\"ct_src_ltm\"],\"rationale\":\"Connections sharing both source and destination addresses are a subset of connections sharing the source address.\"},{\"id\":\"R6\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['ct_dst_src_ltm'] <= df['ct_dst_ltm'])\"],\"features\":[\"ct_dst_src_ltm\",\"ct_dst_ltm\"],\"rationale\":\"Connections sharing both source and destination addresses are a subset of connections sharing the destination address.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 1796,
+   "prompt_tokens": 1958,
+   "cost_usd": 0.00091785,
+   "seconds": 16.7
+  }
+ ]
+}

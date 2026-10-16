@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"(df['f02'] == 'tcp') | ((df['f20'] == 0) & (df['f23'] == 0) & (df['f21'] == 0) & (df['f22'] == 0) & (df['f24'] == 0) & (df['f25'] == 0) & (df['f26'] == 0))\"],\"features\":[\"f02\",\"f20\",\"f23\",\"f21\",\"f22\",\"f24\",\"f25\",\"f26\"],\"rationale\":\"TCP window advertisements, base sequence numbers, and TCP connection setup timings are not applicable to non-TCP flows.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"df['f03'].isin(['http', 'ftp', 'ftp-data', 'smtp', 'ssh', 'dns', 'irc', '-']) | ((df['f29'] == 0) & (df['f30'] == 0))\"],\"features\":[\"f03\",\"f29\",\"f30\"],\"rationale\":\"Pipelined HTTP transaction depth and HTTP response content size are inapplicable when the service is identified as a non-HTTP service.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"df['f03'].isin(['ftp', 'ftp-data', '-']) | (df['f37'] == 0)\"],\"features\":[\"f03\",\"f37\"],\"rationale\":\"An identified non-FTP service cannot have an FTP login session.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 2062,
+   "prompt_tokens": 1852,
+   "cost_usd": 0.00104979,
+   "seconds": 23.7
+  }
+ ]
+}

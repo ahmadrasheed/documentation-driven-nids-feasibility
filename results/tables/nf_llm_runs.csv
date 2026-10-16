@@ -1,0 +1,16 @@
+model,rep,relations,candidates,empty_categories,cost_usd,completion_tokens,providers
+deepseek-v4-pro-0813,1,61,121,0,0.1391,37576,"['CoreWeave', 'Phala', 'Relace', 'StreamLake', 'Wafer']"
+deepseek-v4-pro-0813,2,32,109,0,0.0573,28806,['StreamLake']
+deepseek-v4-pro-0813,3,49,113,0,0.0838,27626,"['DeepInfra', 'NextBit']"
+deepseek-v4-pro-0813,4,36,95,0,0.0652,24234,['DeepInfra']
+deepseek-v4-pro-0813,5,41,101,0,0.0911,33990,['DeepInfra']
+gpt-6-luna,1,25,103,0,0.0078,13705,['OpenAI']
+gpt-6-luna,2,22,86,0,0.0059,11677,['OpenAI']
+gpt-6-luna,3,18,59,0,0.0049,9636,['OpenAI']
+gpt-6-luna,4,33,95,0,0.0059,11746,['OpenAI']
+gpt-6-luna,5,27,85,0,0.0069,13661,['OpenAI']
+qwen3.8-27b,1,37,112,0,0.0274,12548,"['Chutes', 'Phala']"
+qwen3.8-27b,2,51,117,0,0.012,6086,['Phala']
+qwen3.8-27b,3,60,137,0,0.0148,7707,['Phala']
+qwen3.8-27b,4,43,126,0,0.0122,6340,['Phala']
+qwen3.8-27b,5,44,103,0,0.0189,8563,"['ModelRun', 'Phala']"

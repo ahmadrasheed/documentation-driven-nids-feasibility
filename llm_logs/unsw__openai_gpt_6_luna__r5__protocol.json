@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"(df['proto'] == 'tcp') | ((df['swin'] == 0) & (df['dwin'] == 0) & (df['stcpb'] == 0) & (df['dtcpb'] == 0) & (df['tcprtt'] == 0) & (df['synack'] == 0) & (df['ackdat'] == 0))\"],\"features\":[\"proto\",\"swin\",\"dwin\",\"stcpb\",\"dtcpb\",\"tcprtt\",\"synack\",\"ackdat\"],\"rationale\":\"TCP window, sequence-number, and connection-setup timing features are unavailable for non-TCP flows and are represented as zero.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"(df['service'] == 'http') | ((df['trans_depth'] == 0) & (df['response_body_len'] == 0) & (df['ct_flw_http_mthd'] == 0))\"],\"features\":[\"service\",\"trans_depth\",\"response_body_len\",\"ct_flw_http_mthd\"],\"rationale\":\"HTTP transaction depth, HTTP response-body length, and HTTP-method flow counts are zero when the flow is not classified as HTTP.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"(df['service'] == 'ftp') | ((df['is_ftp_login'] == 0) & (df['ct_ftp_cmd'] == 0))\"],\"features\":[\"service\",\"is_ftp_login\",\"ct_ftp_cmd\"],\"rationale\":\"FTP login and command features are zero for flows not classified as FTP.\"},{\"id\":\"R4\",\"category\":\"protocol\",\"alternatives\":[\"(~df['service'].isin(['http', 'ftp', 'ftp-data', 'smtp', 'ssh', 'irc'])) | (df['proto'] == 'tcp')\"],\"features\":[\"service\",\"proto\"],\"rationale\":\"The listed application services use TCP as their transport protocol.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 1444,
+   "prompt_tokens": 1956,
+   "cost_usd": 0.00074183,
+   "seconds": 14.7
+  }
+ ]
+}

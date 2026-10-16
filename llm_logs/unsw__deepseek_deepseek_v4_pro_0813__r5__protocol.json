@@ -1,0 +1,14 @@
+{
+ "model": "deepseek/deepseek-v4-pro-0813",
+ "text": "{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['proto'] == 'tcp') | ((df['swin'] == 0) & (df['dwin'] == 0) & (df['stcpb'] == 0) & (df['dtcpb'] == 0) & (df['tcprtt'] == 0) & (df['synack'] == 0) & (df['ackdat'] == 0) & (df['sloss'] == 0) & (df['dloss'] == 0))\"\n      ],\n      \"features\": [\"proto\", \"swin\", \"dwin\", \"stcpb\", \"dtcpb\", \"tcprtt\", \"synack\", \"ackdat\", \"sloss\", \"dloss\"],\n      \"rationale\": \"TCP-specific fields should be zero for non-TCP protocols.\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['service'] == 'http') | ((df['trans_depth'] == 0) & (df['response_body_len'] == 0))\"\n      ],\n      \"features\": [\"service\", \"trans_depth\", \"response_body_len\"],\n      \"rationale\": \"HTTP-specific fields should be zero for non-HTTP services.\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['service'] == 'ftp') | (df['is_ftp_login'] == 0)\"\n      ],\n      \"features\": [\"service\", \"is_ftp_login\"],\n      \"rationale\": \"FTP login flag should be zero for non-FTP services.\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"~(df['state'].isin(['ACC', 'CLO', 'CON', 'FIN', 'RST'])) | (df['proto'] == 'tcp')\",\n        \"~(df['state'].isin(['ACC', 'CLO', 'CON', 'FIN', 'RST', 'REQ'])) | (df['proto'] == 'tcp')\"\n      ],\n      \"features\": [\"state\", \"proto\"],\n      \"rationale\": \"TCP-specific states imply the protocol is TCP.\"\n    },\n    {\n      \"id\": \"R5\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"~(df['state'].isin(['ECO', 'ECR'])) | (df['proto'] == 'icmp')\"\n      ],\n      \"features\": [\"state\", \"proto\"],\n      \"rationale\": \"ICMP-specific states imply the protocol is ICMP.\"\n    },\n    {\n      \"id\": \"R6\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"~(df['service'].isin(['http', 'ftp', 'ssh', 'smtp', 'ftp-data', 'irc'])) | (df['proto'] == 'tcp')\"\n      ],\n      \"features\": [\"service\", \"proto\"],\n      \"rationale\": \"Services known to run over TCP imply the protocol is TCP.\"\n    },\n    {\n      \"id\": \"R7\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['service'] != 'dns') | (df['proto'].isin(['udp', 'tcp']))\"\n      ],\n      \"features\": [\"service\", \"proto\"],\n      \"rationale\": \"DNS service can only use UDP or TCP.\"\n    }\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "DeepInfra",
+   "finish_reason": "stop",
+   "completion_tokens": 4636,
+   "prompt_tokens": 2055,
+   "cost_usd": 0.0125747,
+   "seconds": 39.8
+  }
+ ]
+}

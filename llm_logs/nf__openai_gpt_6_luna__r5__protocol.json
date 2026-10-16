@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] == 6) | ((df['TCP_FLAGS'] == 0) & (df['CLIENT_TCP_FLAGS'] == 0) & (df['SERVER_TCP_FLAGS'] == 0) & (df['TCP_WIN_MAX_IN'] == 0) & (df['TCP_WIN_MAX_OUT'] == 0) & (df['RETRANSMITTED_IN_BYTES'] == 0) & (df['RETRANSMITTED_IN_PKTS'] == 0) & (df['RETRANSMITTED_OUT_BYTES'] == 0) & (df['RETRANSMITTED_OUT_PKTS'] == 0))\"],\"features\":[\"PROTOCOL\",\"TCP_FLAGS\",\"CLIENT_TCP_FLAGS\",\"SERVER_TCP_FLAGS\",\"TCP_WIN_MAX_IN\",\"TCP_WIN_MAX_OUT\",\"RETRANSMITTED_IN_BYTES\",\"RETRANSMITTED_IN_PKTS\",\"RETRANSMITTED_OUT_BYTES\",\"RETRANSMITTED_OUT_PKTS\"],\"rationale\":\"TCP flags, TCP windows, and TCP retransmission features are inapplicable and therefore zero for non-TCP flows.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] == 1) | (df['ICMP_IPV4_TYPE'] == 0)\"],\"features\":[\"PROTOCOL\",\"ICMP_IPV4_TYPE\"],\"rationale\":\"The IPv4 ICMP type feature is inapplicable for protocols other than ICMPv4.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'].isin([1, 58])) | (df['ICMP_TYPE'] == 0)\"],\"features\":[\"PROTOCOL\",\"ICMP_TYPE\"],\"rationale\":\"The encoded ICMP type and code feature is inapplicable to protocols other than ICMP and ICMPv6.\"},{\"id\":\"R4\",\"category\":\"protocol\",\"alternatives\":[\"(df['PROTOCOL'] != 1) | ((df['ICMP_TYPE'] // 256) == df['ICMP_IPV4_TYPE'])\"],\"features\":[\"PROTOCOL\",\"ICMP_TYPE\",\"ICMP_IPV4_TYPE\"],\"rationale\":\"For ICMPv4, the high byte of the encoded type-and-code value is the IPv4 ICMP type.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 1895,
+   "prompt_tokens": 1875,
+   "cost_usd": 0.00096652,
+   "seconds": 16.7
+  }
+ ]
+}

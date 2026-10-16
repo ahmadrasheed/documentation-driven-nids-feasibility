@@ -1,0 +1,14 @@
+{
+ "model": "qwen/qwen3.8-27b",
+ "text": "\n\n{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"(df['proto'] != 'tcp') | (df['swin'] >= 0)\",\"(df['proto'] != 'tcp') | (df['dwin'] >= 0)\",\"(df['proto'] != 'tcp') | (df['stcpb'] >= 0)\",\"(df['proto'] != 'tcp') | (df['dtcpb'] >= 0)\"],\"features\":[\"proto\",\"swin\",\"dwin\",\"stcpb\",\"dtcpb\"],\"rationale\":\"TCP window advertisement and base sequence number are TCP-specific fields; for non-TCP flows they must be zero or absent.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"(df['proto'] != 'tcp') | (df['tcprtt'] >= 0)\",\"(df['proto'] != 'tcp') | (df['synack'] >= 0)\",\"(df['proto'] != 'tcp') | (df['ackdat'] >= 0)\"],\"features\":[\"proto\",\"tcprtt\",\"synack\",\"ackdat\"],\"rationale\":\"TCP connection setup timing features (synack, ackdat, tcprtt) are only meaningful for TCP flows; for non-TCP they must be zero or absent.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"(df['service'] != 'http') | (df['trans_depth'] >= 0)\",\"(df['service'] != 'http') | (df['response_body_len'] >= 0)\"],\"features\":[\"service\",\"trans_depth\",\"response_body_len\"],\"rationale\":\"HTTP transaction depth and response body length are HTTP-specific; for non-HTTP services they must be zero or absent.\"},{\"id\":\"R4\",\"category\":\"protocol\",\"alternatives\":[\"(df['service'] != 'ftp') | (df['is_ftp_login'] == 0)\",\"(df['service'] != 'ftp') | (df['ct_ftp_cmd'] == 0)\"],\"features\":[\"service\",\"is_ftp_login\",\"ct_ftp_cmd\"],\"rationale\":\"FTP login indicator and FTP command count are FTP-specific; for non-FTP services they must be zero.\"},{\"id\":\"R5\",\"category\":\"protocol\",\"alternatives\":[\"(df['service'] != 'http') | (df['ct_flw_http_mthd'] == 0)\"],\"features\":[\"service\",\"ct_flw_http_mthd\"],\"rationale\":\"HTTP method flow count is HTTP-specific; for non-HTTP services it must be zero.\"},{\"id\":\"R6\",\"category\":\"protocol\",\"alternatives\":[\"(df['proto'] != 'tcp') | (df['state'].isin(['ACC','CLO','CON','ECO','ECR','FIN','INT','MAS','PAR','REQ','RST','TST','TXD','URH','URN','-']))\"],\"features\":[\"proto\",\"state\"],\"rationale\":\"The documented state values are TCP connection states; for non-TCP protocols the state should be '-' (not used) or one of the documented values.\"},{\"id\":\"R7\",\"category\":\"protocol\",\"alternatives\":[\"(df['proto'] != 'tcp') | (df['state'] != '-')\"],\"features\":[\"proto\",\"state\"],\"rationale\":\"For TCP flows a connection state should be assigned (not '-'), since TCP has well-defined connection states.\"}]}",
+ "attempts": [
+  {
+   "provider": "Phala",
+   "finish_reason": "stop",
+   "completion_tokens": 771,
+   "prompt_tokens": 2187,
+   "cost_usd": 0.001528875,
+   "seconds": 5.7
+  }
+ ]
+}

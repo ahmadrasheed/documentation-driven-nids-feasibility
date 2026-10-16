@@ -1,0 +1,6 @@
+source,runs,hard_mean,FPR ToN-IoT later % mean,FPR UNSW later % mean,FPR CIC (never used) % mean,FPR ToN-IoT later % std,FPR UNSW later % std,FPR CIC (never used) % std
+LLM deepseek-v4-pro-0813,5,69.8,0.025,0.0,0.138,0.055,0.0,0.261
+LLM gpt-6-luna,5,54.0,0.081,0.001,1.42,0.074,0.0,1.277
+LLM qwen3.8-27b,5,76.6,0.064,0.049,1.136,0.075,0.096,1.527
+Template miner (no LLM),1,1996.0,9.297,0.398,47.757,,,
+Soft (ranges + CBAD pairs),1,18.0,0.771,0.006,28.714,,,

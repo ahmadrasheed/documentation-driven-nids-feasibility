@@ -1,0 +1,13 @@
+setting,attack,evasion_%,CBAD_detection_among_evading_%,undetected_evasion_%,direct_violation_%,mean_features_changed
+paper,FGSM,90.68,99.71,0.26,99.74,18.87
+paper,BIM,91.06,100.0,0.0,100.0,19.36
+paper,PGD,91.06,100.0,0.0,100.0,19.36
+paper,JSMA,56.78,17.96,46.58,0.0,1.87
+practical,FGSM,90.52,64.12,32.48,0.0,17.87
+practical,BIM,90.68,64.09,32.56,0.0,18.47
+practical,PGD,90.68,64.09,32.56,0.0,18.47
+practical,JSMA,56.78,17.96,46.58,0.0,1.87
+aware,FGSM,89.98,0.0,89.98,0.0,17.2
+aware,BIM,90.2,0.0,90.2,0.0,17.44
+aware,PGD,90.2,0.0,90.2,0.0,17.44
+aware,JSMA,54.02,0.0,54.02,0.0,1.68

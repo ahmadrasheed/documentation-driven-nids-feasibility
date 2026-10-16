@@ -1,0 +1,14 @@
+{
+ "model": "deepseek/deepseek-v4-pro-0813",
+ "text": "{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['proto'] == 'tcp') | ((df['swin'] == 0) & (df['dwin'] == 0) & (df['stcpb'] == 0) & (df['dtcpb'] == 0) & (df['tcprtt'] == 0) & (df['synack'] == 0) & (df['ackdat'] == 0))\"\n      ],\n      \"features\": [\"proto\", \"swin\", \"dwin\", \"stcpb\", \"dtcpb\", \"tcprtt\", \"synack\", \"ackdat\"],\n      \"rationale\": \"TCP-specific fields must be zero for non-TCP protocols.\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['is_ftp_login'] == 0) | ((df['proto'] == 'tcp') & (df['service'] == 'ftp'))\"\n      ],\n      \"features\": [\"is_ftp_login\", \"proto\", \"service\"],\n      \"rationale\": \"FTP login indicator requires TCP protocol and FTP service.\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"((df['trans_depth'] == 0) & (df['response_body_len'] == 0)) | ((df['proto'] == 'tcp') & (df['service'] == 'http'))\"\n      ],\n      \"features\": [\"trans_depth\", \"response_body_len\", \"proto\", \"service\"],\n      \"rationale\": \"HTTP-specific fields must be zero unless the flow is TCP and HTTP service.\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"~df['service'].isin(['ftp', 'ftp-data', 'ssh', 'http', 'smtp', 'irc']) | (df['proto'] == 'tcp')\"\n      ],\n      \"features\": [\"service\", \"proto\"],\n      \"rationale\": \"These services are TCP-based and must use TCP protocol.\"\n    },\n    {\n      \"id\": \"R5\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['service'] != 'dns') | (df['proto'].isin(['tcp', 'udp']))\"\n      ],\n      \"features\": [\"service\", \"proto\"],\n      \"rationale\": \"DNS service can use either TCP or UDP.\"\n    },\n    {\n      \"id\": \"R6\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['proto'] != 'udp') | (~df['state'].isin(['FIN', 'RST']))\"\n      ],\n      \"features\": [\"proto\", \"state\"],\n      \"rationale\": \"UDP flows do not have TCP connection termination states FIN or RST.\"\n    }\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "DeepInfra",
+   "finish_reason": "stop",
+   "completion_tokens": 4977,
+   "prompt_tokens": 2055,
+   "cost_usd": 0.0134613,
+   "seconds": 52.2
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+analysis,setting,n_mean,FPR CIC mean %,FPR CIC max %
+falsification threshold,0%,65.6,0.014,0.021
+falsification threshold,0.01%,65.8,0.222,3.143
+falsification threshold,0.1%,66.8,0.898,3.175
+falsification threshold,0.5%,71.133,2.912,6.227
+falsification threshold,1%,71.133,2.912,6.227
+vacuity threshold,0.01%,67.067,,
+vacuity threshold,0.1%,66.8,,
+vacuity threshold,1%,65.933,,
+vacuity threshold,5%,65.0,,
+seed,"LLM runs, seed 42",66.8,,
+seed,"template miner, seed 42",1996.0,47.757,
+seed,"LLM runs, seed 7",66.8,,
+seed,"template miner, seed 7",1222.0,47.921,
+seed,"LLM runs, seed 2026",66.8,,
+seed,"template miner, seed 2026",1079.0,51.209,
+consensus (>= 2 of 5 runs),deepseek-v4-pro-0813,65.0,0.021,
+consensus (>= 2 of 5 runs),gpt-6-luna,57.0,2.374,
+consensus (>= 2 of 5 runs),qwen3.8-27b,71.0,0.054,

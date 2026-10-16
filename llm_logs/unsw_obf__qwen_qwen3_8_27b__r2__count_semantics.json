@@ -1,0 +1,14 @@
+{
+ "model": "qwen/qwen3.8-27b",
+ "text": "\n\n{\"type_map\": {}, \"constraints\": [{\"id\": \"R1\", \"category\": \"count_semantics\", \"alternatives\": [\"df['f14'] <= df['f05']\"], \"features\": [\"f14\", \"f05\"], \"rationale\": \"Source retransmitted or dropped packets are a subset of all source-to-destination packets, so the retransmission count cannot exceed the total packet count.\"}, {\"id\": \"R2\", \"category\": \"count_semantics\", \"alternatives\": [\"df['f15'] <= df['f06']\"], \"features\": [\"f15\", \"f06\"], \"rationale\": \"Destination retransmitted or dropped packets are a subset of all destination-to-source packets, so the retransmission count cannot exceed the total packet count.\"}]}",
+ "attempts": [
+  {
+   "provider": "Ionstream",
+   "finish_reason": "stop",
+   "completion_tokens": 3364,
+   "prompt_tokens": 2138,
+   "cost_usd": 0.0080872418,
+   "seconds": 61.1
+  }
+ ]
+}

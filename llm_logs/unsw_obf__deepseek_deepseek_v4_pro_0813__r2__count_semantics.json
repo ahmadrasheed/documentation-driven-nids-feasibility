@@ -1,0 +1,14 @@
+{
+ "model": "deepseek/deepseek-v4-pro-0813",
+ "text": "{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\"(df['f31'] <= df['f40'])\"],\n      \"features\": [\"f31\", \"f40\"],\n      \"rationale\": \"f31 counts connections with same service and source address, which is a subset of connections with same source address (f40).\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\"(df['f41'] <= df['f33'])\"],\n      \"features\": [\"f41\", \"f33\"],\n      \"rationale\": \"f41 counts connections with same service and destination address, which is a subset of connections with same destination address (f33).\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\"(df['f34'] <= df['f40'])\"],\n      \"features\": [\"f34\", \"f40\"],\n      \"rationale\": \"f34 counts connections with same source address and destination port, which is a subset of connections with same source address (f40).\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\"(df['f35'] <= df['f33'])\"],\n      \"features\": [\"f35\", \"f33\"],\n      \"rationale\": \"f35 counts connections with same destination address and source port, which is a subset of connections with same destination address (f33).\"\n    },\n    {\n      \"id\": \"R5\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\"(df['f36'] <= df['f40'])\"],\n      \"features\": [\"f36\", \"f40\"],\n      \"rationale\": \"f36 counts connections with same source and destination address, which is a subset of connections with same source address (f40).\"\n    },\n    {\n      \"id\": \"R6\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\"(df['f36'] <= df['f33'])\"],\n      \"features\": [\"f36\", \"f33\"],\n      \"rationale\": \"f36 counts connections with same source and destination address, which is a subset of connections with same destination address (f33).\"\n    }\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "Wafer",
+   "finish_reason": "stop",
+   "completion_tokens": 3801,
+   "prompt_tokens": 1901,
+   "cost_usd": 0.01969372,
+   "seconds": 78.6
+  }
+ ]
+}

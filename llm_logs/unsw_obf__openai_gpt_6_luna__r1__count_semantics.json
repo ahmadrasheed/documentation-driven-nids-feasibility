@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['f31'] <= df['f40'])\"],\"features\":[\"f31\",\"f40\"],\"rationale\":\"Connections matching both source address and service are a subset of connections matching the source address.\"},{\"id\":\"R2\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['f41'] <= df['f33'])\"],\"features\":[\"f41\",\"f33\"],\"rationale\":\"Connections matching both destination address and service are a subset of connections matching the destination address.\"},{\"id\":\"R3\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['f34'] <= df['f40'])\"],\"features\":[\"f34\",\"f40\"],\"rationale\":\"Connections matching both source address and destination port are a subset of connections matching the source address.\"},{\"id\":\"R4\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['f35'] <= df['f33'])\"],\"features\":[\"f35\",\"f33\"],\"rationale\":\"Connections matching both destination address and source port are a subset of connections matching the destination address.\"},{\"id\":\"R5\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['f36'] <= df['f40'])\"],\"features\":[\"f36\",\"f40\"],\"rationale\":\"Connections matching both source and destination addresses are a subset of connections matching the source address.\"},{\"id\":\"R6\",\"category\":\"count_semantics\",\"alternatives\":[\"(df['f36'] <= df['f33'])\"],\"features\":[\"f36\",\"f33\"],\"rationale\":\"Connections matching both source and destination addresses are a subset of connections matching the destination address.\"},{\"id\":\"R7\",\"category\":\"count_semantics\",\"alternatives\":[\"((df['f03'] == 'http') | (df['f29'] == 0))\"],\"features\":[\"f29\",\"f03\"],\"rationale\":\"A positive HTTP pipelined-depth count requires the flow to use the HTTP service.\"},{\"id\":\"R8\",\"category\":\"count_semantics\",\"alternatives\":[\"((df['f03'] == 'http') | (df['f39'] == 0))\"],\"features\":[\"f39\",\"f03\"],\"rationale\":\"A positive count of flows with HTTP methods requires the service to be HTTP.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 3270,
+   "prompt_tokens": 1854,
+   "cost_usd": 0.001866675,
+   "seconds": 34.7
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+model,rep,feature names,hard,relational,rejects known-invalid flows %
+deepseek-v4-pro-0813,1,original names,36,8,86.5
+deepseek-v4-pro-0813,1,neutral codes,36,8,55.51
+deepseek-v4-pro-0813,2,original names,37,9,74.19
+deepseek-v4-pro-0813,2,neutral codes,36,8,55.51
+gpt-6-luna,1,original names,33,5,55.51
+gpt-6-luna,1,neutral codes,33,5,55.51
+gpt-6-luna,2,original names,37,9,74.19
+gpt-6-luna,2,neutral codes,35,7,55.51
+qwen3.8-27b,1,original names,47,19,99.67
+qwen3.8-27b,1,neutral codes,54,26,99.67
+qwen3.8-27b,2,original names,40,12,80.1
+qwen3.8-27b,2,neutral codes,45,17,99.67

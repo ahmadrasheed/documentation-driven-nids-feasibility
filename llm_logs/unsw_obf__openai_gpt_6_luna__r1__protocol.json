@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"(df['f02'] == 'tcp') | ((df['f20'] == 0) & (df['f21'] == 0) & (df['f22'] == 0) & (df['f23'] == 0) & (df['f24'] == 0) & (df['f25'] == 0) & (df['f26'] == 0))\"],\"features\":[\"f02\",\"f20\",\"f21\",\"f22\",\"f23\",\"f24\",\"f25\",\"f26\"],\"rationale\":\"TCP window, sequence-number, and connection-setup timing features are not applicable to non-TCP flows.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"(df['f03'].isin(['http'])) | ((df['f29'] == 0) & (df['f30'] == 0) & (df['f39'] == 0))\"],\"features\":[\"f03\",\"f29\",\"f30\",\"f39\"],\"rationale\":\"HTTP pipelining depth, HTTP content size, and HTTP-method flow counts are inapplicable when the service is not HTTP.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"(df['f03'].isin(['ftp', 'ftp-data'])) | ((df['f37'] == 0) & (df['f38'] == 0))\"],\"features\":[\"f03\",\"f37\",\"f38\"],\"rationale\":\"FTP login and FTP-command features are inapplicable when the service is neither FTP nor FTP data.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 1909,
+   "prompt_tokens": 1852,
+   "cost_usd": 0.001185925,
+   "seconds": 22.0
+  }
+ ]
+}

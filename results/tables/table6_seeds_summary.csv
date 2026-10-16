@@ -1,0 +1,9 @@
+,evasion_%,evasion_%,valid|Reference %,valid|Reference %,valid|LLM all %,valid|LLM all %,valid evasion|LLM all %,valid evasion|LLM all %
+,mean,std,mean,std,mean,std,mean,std
+attacker,,,,,,,,
+None (unconstrained),95.49,4.5,0.0,0.0,0.0,0.0,0.0,0.0
+Rounding only,92.42,4.39,100.0,0.0,0.0,0.0,0.0,0.0
+NIDS-CBAD aware,93.61,4.24,0.0,0.0,0.0,0.0,0.0,0.0
+Template miner aware,1.28,1.28,100.0,0.0,100.0,0.0,1.28,1.28
+Reference (published) aware,75.92,19.81,100.0,0.0,0.01,0.02,0.01,0.02
+LLM all models aware,74.24,19.18,100.0,0.0,100.0,0.0,74.24,19.18

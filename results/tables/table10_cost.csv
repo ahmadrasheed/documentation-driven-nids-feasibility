@@ -1,0 +1,10 @@
+dataset,model,requests,cost_usd,completion_tokens,mean_seconds
+nf,deepseek_deepseek_v4_pro_0813,22,0.436,152232,72.209
+nf,openai_gpt_6_luna,20,0.031,60425,27.51
+nf,qwen_qwen3_8_27b,20,0.085,41244,22.7
+unsw,deepseek_deepseek_v4_pro_0813,21,0.312,115415,50.586
+unsw,openai_gpt_6_luna,20,0.027,51049,25.31
+unsw,qwen_qwen3_8_27b,20,0.109,55248,26.32
+unsw_obf,deepseek_deepseek_v4_pro_0813,8,0.215,42103,82.412
+unsw_obf,openai_gpt_6_luna,8,0.01,17622,24.512
+unsw_obf,qwen_qwen3_8_27b,8,0.099,40170,87.8

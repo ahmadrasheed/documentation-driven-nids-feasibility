@@ -1,0 +1,14 @@
+{
+ "model": "qwen/qwen3.8-27b",
+ "text": "\n\n{\"type_map\": {}, \"constraints\": [{\"id\": \"R1\", \"category\": \"math\", \"alternatives\": [\"np.isclose(df['tcprtt'], df['synack'] + df['ackdat'], rtol=1e-5, atol=1e-3)\"], \"features\": [\"tcprtt\", \"synack\", \"ackdat\"], \"rationale\": \"Documentation explicitly defines tcprtt as the sum of synack and ackdat.\"}, {\"id\": \"R2\", \"category\": \"math\", \"alternatives\": [\"np.where(df['spkts'] > 0, np.isclose(df['smean'], df['sbytes'] / df['spkts'], rtol=0.05, atol=1), True)\"], \"features\": [\"smean\", \"sbytes\", \"spkts\"], \"rationale\": \"smean is defined as the mean flow packet size from source, which should equal total source bytes divided by source packet count.\"}, {\"id\": \"R3\", \"category\": \"math\", \"alternatives\": [\"np.where(df['dpkts'] > 0, np.isclose(df['dmean'], df['dbytes'] / df['dpkts'], rtol=0.05, atol=1), True)\"], \"features\": [\"dmean\", \"dbytes\", \"dpkts\"], \"rationale\": \"dmean is defined as the mean flow packet size from destination, which should equal total destination bytes divided by destination packet count.\"}, {\"id\": \"R4\", \"category\": \"math\", \"alternatives\": [\"np.where(df['dur'] > 0, np.isclose(df['sload'], (df['sbytes'] * 8) / df['dur'], rtol=0.05, atol=1), True)\"], \"features\": [\"sload\", \"sbytes\", \"dur\"], \"rationale\": \"Sload is defined as source bits per second, which should equal total source bytes times 8 divided by flow duration.\"}, {\"id\": \"R5\", \"category\": \"math\", \"alternatives\": [\"np.where(df['dur'] > 0, np.isclose(df['dload'], (df['dbytes'] * 8) / df['dur'], rtol=0.05, atol=1), True)\"], \"features\": [\"dload\", \"dbytes\", \"dur\"], \"rationale\": \"Dload is defined as destination bits per second, which should equal total destination bytes times 8 divided by flow duration.\"}, {\"id\": \"R6\", \"category\": \"math\", \"alternatives\": [\"np.where(df['spkts'] > 1, np.isclose(df['sinpkt'], df['dur'] / (df['spkts'] - 1), rtol=0.1, atol=1), True)\"], \"features\": [\"sinpkt\", \"dur\", \"spkts\"], \"rationale\": \"Source interpacket arrival time is the mean time between consecutive source packets, which equals total duration divided by the number of inter-packet intervals (spkts - 1).\"}]}",
+ "attempts": [
+  {
+   "provider": "Reka",
+   "finish_reason": "stop",
+   "completion_tokens": 927,
+   "prompt_tokens": 2135,
+   "cost_usd": 0.00288775,
+   "seconds": 14.1
+  }
+ ]
+}

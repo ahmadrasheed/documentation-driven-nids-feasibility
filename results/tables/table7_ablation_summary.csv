@@ -1,0 +1,9 @@
+variant,n_mean,FPR ToN-IoT later % mean,FPR UNSW later % mean,FPR CIC (never used) % mean,FPR CIC max %
+Full pipeline,66.8,0.056,0.016,0.898,3.175
+No falsification,104.133,100.0,99.214,100.0,100.0
+No vacuity test,69.2,0.062,0.016,0.9,3.204
+First alternative only,63.8,0.056,0.016,0.896,3.146
+No type map,21.333,0.056,0.016,0.898,3.175
+Falsified on ToN-IoT only,72.4,1.573,61.712,6.505,6.994
+Falsified on UNSW only,69.867,0.431,0.014,2.709,5.593
+Union of 5 runs,101.667,0.181,0.074,2.836,5.528

@@ -1,0 +1,10 @@
+attacker,frozen,rounded,evasion_%,valid|Reference %,valid|LLM all %,valid|Template miner %,valid|NIDS-CBAD %,valid evasion|Reference %,valid evasion|LLM all %
+None (unconstrained),0,0,91.06,0.0,0.0,0.0,0.0,0.0,0.0
+Rounding only,0,19,89.62,100.0,0.09,0.0,36.33,89.62,0.08
+NIDS-CBAD aware,2,0,90.2,0.0,0.0,0.0,100.0,0.0,0.0
+Template miner aware,23,0,0.32,100.0,100.0,100.0,100.0,0.32,0.32
+LLM deepseek-v4-pro-0813 aware,13,6,88.1,100.0,73.35,2.45,100.0,88.1,64.62
+LLM gpt-6-luna aware,13,8,89.36,100.0,35.23,0.16,100.0,89.36,31.48
+LLM qwen3.8-27b aware,13,6,87.96,100.0,64.57,1.64,100.0,87.96,56.8
+LLM all models aware,16,5,88.64,100.0,100.0,21.37,100.0,88.64,88.64
+Reference (published) aware,11,8,72.46,100.0,0.08,0.0,100.0,72.46,0.06

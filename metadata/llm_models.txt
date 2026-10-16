@@ -1,0 +1,20 @@
+LLM provider: OpenRouter
+
+Models:
+deepseek/deepseek-v4-pro-0813
+openai/gpt-6-luna
+qwen/qwen3.8-27b
+
+Independent runs per model: 5
+Temperature: 0
+Maximum output tokens: 16000
+
+Request strategy:
+1. capped reasoning attempt
+2. fallback with reasoning disabled if necessary
+
+Constraint categories:
+- definition
+- protocol
+- count_semantics
+- math

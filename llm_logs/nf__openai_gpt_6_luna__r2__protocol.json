@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"((df['PROTOCOL'] == 6) | ((df['TCP_FLAGS'] == 0) & (df['CLIENT_TCP_FLAGS'] == 0) & (df['SERVER_TCP_FLAGS'] == 0)))\"],\"features\":[\"PROTOCOL\",\"TCP_FLAGS\",\"CLIENT_TCP_FLAGS\",\"SERVER_TCP_FLAGS\"],\"rationale\":\"For a non-TCP IP protocol there are no TCP flags to contribute to any of the cumulative TCP flag fields.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"((df['PROTOCOL'] == 6) | ((df['RETRANSMITTED_IN_BYTES'] == 0) & (df['RETRANSMITTED_IN_PKTS'] == 0) & (df['RETRANSMITTED_OUT_BYTES'] == 0) & (df['RETRANSMITTED_OUT_PKTS'] == 0)))\"],\"features\":[\"PROTOCOL\",\"RETRANSMITTED_IN_BYTES\",\"RETRANSMITTED_IN_PKTS\",\"RETRANSMITTED_OUT_BYTES\",\"RETRANSMITTED_OUT_PKTS\"],\"rationale\":\"The retransmission features count retransmitted TCP traffic, so they must be zero when the IP protocol is not TCP.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"((df['PROTOCOL'] == 1) | (df['ICMP_IPV4_TYPE'] == 0))\"],\"features\":[\"PROTOCOL\",\"ICMP_IPV4_TYPE\"],\"rationale\":\"ICMP_IPV4_TYPE describes an IPv4 ICMP message type and therefore cannot be populated for a non-ICMPv4 IP protocol.\"},{\"id\":\"R4\",\"category\":\"protocol\",\"alternatives\":[\"((df['PROTOCOL'] != 1) | ((df['ICMP_TYPE'] // 256) == df['ICMP_IPV4_TYPE']))\"],\"features\":[\"PROTOCOL\",\"ICMP_TYPE\",\"ICMP_IPV4_TYPE\"],\"rationale\":\"For ICMPv4, ICMP_TYPE encodes the ICMP type in the high-order part as type times 256 plus code, so its quotient by 256 must equal the IPv4 type.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 2205,
+   "prompt_tokens": 1875,
+   "cost_usd": 0.00112152,
+   "seconds": 20.7
+  }
+ ]
+}

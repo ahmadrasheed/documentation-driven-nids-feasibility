@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 2725,
+   "prompt_tokens": 1956,
+   "cost_usd": 0.001606925,
+   "seconds": 29.7
+  }
+ ]
+}

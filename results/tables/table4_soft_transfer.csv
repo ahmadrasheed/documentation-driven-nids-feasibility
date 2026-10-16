@@ -1,0 +1,10 @@
+learned_on,evaluated_on,n_pairs,FPR_ranges_%,FPR_regression_%,FPR_soft_%
+ToN-IoT,ToN-IoT later,5,1.132,0.317,1.133
+ToN-IoT,UNSW later,5,12.575,49.205,56.464
+ToN-IoT,CIC (never used),5,35.469,13.232,35.519
+UNSW,ToN-IoT later,23,65.458,0.643,65.49
+UNSW,UNSW later,23,0.005,0.002,0.006
+UNSW,CIC (never used),23,75.044,24.63,75.072
+ToN-IoT + UNSW,ToN-IoT later,18,0.745,0.474,0.771
+ToN-IoT + UNSW,UNSW later,18,0.005,0.001,0.006
+ToN-IoT + UNSW,CIC (never used),18,28.53,23.801,28.714

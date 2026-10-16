@@ -1,0 +1,14 @@
+{
+ "model": "qwen/qwen3.8-27b",
+ "text": "\n\n{\"type_map\": {},\n  \"constraints\": [\n    {\"id\": \"R1\", \"category\": \"count_semantics\",\n     \"alternatives\": [\"(df['sloss'] <= df['spkts']) & (df['dloss'] <= df['dpkts'])\"],\n     \"features\": [\"sloss\", \"spkts\", \"dloss\", \"dpkts\"],\n     \"rationale\": \"Retransmitted or dropped packets are a subset of total packets sent in each direction, so loss counts cannot exceed total packet counts.\"},\n    {\"id\": \"R2\", \"category\": \"count_semantics\",\n     \"alternatives\": [\"(df['sloss'] >= 0) & (df['dloss'] >= 0)\"],\n     \"features\": [\"sloss\", \"dloss\"],\n     \"rationale\": \"Loss counts represent the number of retransmitted or dropped packets and cannot be negative.\"},\n    {\"id\": \"R3\", \"category\": \"count_semantics\",\n     \"alternatives\": [\"(df['spkts'] >= 0) & (df['dpkts'] >= 0)\"],\n     \"features\": [\"spkts\", \"dpkts\"],\n     \"rationale\": \"Packet counts are non-negative integers by definition.\"},\n    {\"id\": \"R4\", \"category\": \"count_semantics\",\n     \"alternatives\": [\"(df['ct_flw_http_mthd'] >= 0) & (df['ct_ftp_cmd'] >= 0) & (df['ct_srv_src'] >= 0) & (df['ct_srv_dst'] >= 0) & (df['ct_dst_ltm'] >= 0) & (df['ct_src_ltm'] >= 0) & (df['ct_src_dport_ltm'] >= 0) & (df['ct_dst_sport_ltm'] >= 0) & (df['ct_dst_src_ltm'] >= 0) & (df['ct_state_ttl'] >= 0)\"],\n     \"features\": [\"ct_flw_http_mthd\", \"ct_ftp_cmd\", \"ct_srv_src\", \"ct_srv_dst\", \"ct_dst_ltm\", \"ct_src_ltm\", \"ct_src_dport_ltm\", \"ct_dst_sport_ltm\", \"ct_dst_src_ltm\", \"ct_state_ttl\"],\n     \"rationale\": \"All connection-count features are defined as counts of connections or flows and must be non-negative.\"},\n    {\"id\": \"R5\", \"category\": \"count_semantics\",\n     \"alternatives\": [\"(df['is_ftp_login'].isin([0, 1])) & (df['is_sm_ips_ports'].isin([0, 1]))\"],\n     \"features\": [\"is_ftp_login\", \"is_sm_ips_ports\"],\n     \"rationale\": \"Binary indicator features are defined to take exactly the value 0 or 1.\"},\n    {\"id\": \"R6\", \"category\": \"count_semantics\",\n     \"alternatives\": [\"(df['trans_depth'] >= 0) & (df['response_body_len'] >= 0)\"],\n     \"features\": [\"trans_depth\", \"response_body_len\"],\n     \"rationale\": \"Transaction depth and response body length are non-negative counts/sizes by definition.\"}\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "Phala",
+   "finish_reason": "stop",
+   "completion_tokens": 792,
+   "prompt_tokens": 2189,
+   "cost_usd": 0.00156855,
+   "seconds": 5.1
+  }
+ ]
+}

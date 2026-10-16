@@ -1,0 +1,14 @@
+{
+ "model": "qwen/qwen3.8-27b",
+ "text": "\n\n```json\n{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['sloss'] <= df['spkts']\"\n      ],\n      \"features\": [\"sloss\", \"spkts\"],\n      \"rationale\": \"sloss counts retransmitted or dropped source packets, which is a subset of all source packets sent (spkts), so it cannot exceed spkts.\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['dloss'] <= df['dpkts']\"\n      ],\n      \"features\": [\"dloss\", \"dpkts\"],\n      \"rationale\": \"dloss counts retransmitted or dropped destination packets, which is a subset of all destination packets sent (dpkts), so it cannot exceed dpkts.\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"(df['service'] == 'http') | (df['trans_depth'] == 0)\"\n      ],\n      \"features\": [\"service\", \"trans_depth\"],\n      \"rationale\": \"trans_depth measures pipelined HTTP request/response depth, so it must be zero for non-HTTP flows.\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"(df['service'] == 'http') | (df['response_body_len'] == 0)\"\n      ],\n      \"features\": [\"service\", \"response_body_len\"],\n      \"rationale\": \"response_body_len is the uncompressed content size of data from the server's HTTP service, so it must be zero for non-HTTP flows.\"\n    },\n    {\n      \"id\": \"R5\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"(df['service'] == 'ftp') | (df['is_ftp_login'] == 0)\"\n      ],\n      \"features\": [\"service\", \"is_ftp_login\"],\n      \"rationale\": \"is_ftp_login indicates whether an FTP session was accessed with user and password, so it must be 0 for non-FTP flows.\"\n    },\n    {\n      \"id\": \"R6\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"(df['service'] == 'ftp') | (df['ct_ftp_cmd'] == 0)\"\n      ],\n      \"features\": [\"service\", \"ct_ftp_cmd\"],\n      \"rationale\": \"ct_ftp_cmd counts flows with a command in an FTP session, so it must be 0 for non-FTP flows.\"\n    },\n    {\n      \"id\": \"R7\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"(df['service'] == 'http') | (df['ct_flw_http_mthd'] == 0)\"\n      ],\n      \"features\": [\"service\", \"ct_flw_http_mthd\"],\n      \"rationale\": \"ct_flw_http_mthd counts flows with HTTP methods like GET or POST, so it must be 0 for non-HTTP flows.\"\n    }\n  ]\n}\n```",
+ "attempts": [
+  {
+   "provider": "Phala",
+   "finish_reason": "stop",
+   "completion_tokens": 834,
+   "prompt_tokens": 2189,
+   "cost_usd": 0.0016473,
+   "seconds": 5.5
+  }
+ ]
+}

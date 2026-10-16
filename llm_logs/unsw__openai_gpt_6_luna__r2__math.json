@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"math\",\"alternatives\":[\"np.isclose(df['tcprtt'], df['synack'] + df['ackdat'], rtol=1e-5, atol=1e-8)\"],\"features\":[\"tcprtt\",\"synack\",\"ackdat\"],\"rationale\":\"The documentation defines TCP round-trip setup time as the sum of synack and ackdat.\"},{\"id\":\"R2\",\"category\":\"math\",\"alternatives\":[\"np.where(df['dur'] != 0, np.isclose(df['sload'], 8 * df['sbytes'] / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8), True)\"],\"features\":[\"sload\",\"sbytes\",\"dur\"],\"rationale\":\"Source load in bits per second may be computed by converting source bytes to bits and dividing by duration.\"},{\"id\":\"R3\",\"category\":\"math\",\"alternatives\":[\"np.where(df['dur'] != 0, np.isclose(df['dload'], 8 * df['dbytes'] / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8), True)\"],\"features\":[\"dload\",\"dbytes\",\"dur\"],\"rationale\":\"Destination load in bits per second may be computed by converting destination bytes to bits and dividing by duration.\"},{\"id\":\"R4\",\"category\":\"math\",\"alternatives\":[\"np.where(df['dur'] != 0, np.isclose(df['rate'], (df['spkts'] + df['dpkts']) / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8), True)\",\"np.where(df['dur'] != 0, np.isclose(df['rate'], (df['sbytes'] + df['dbytes']) / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8), True)\",\"np.where(df['dur'] != 0, np.isclose(df['rate'], 8 * (df['sbytes'] + df['dbytes']) / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8), True)\"],\"features\":[\"rate\",\"spkts\",\"dpkts\",\"sbytes\",\"dbytes\",\"dur\"],\"rationale\":\"The undocumented rate may represent packet rate or byte/bit throughput over the flow duration.\"},{\"id\":\"R5\",\"category\":\"math\",\"alternatives\":[\"np.where(df['spkts'] > 0, np.abs(df['smean'] - df['sbytes'] / np.where(df['spkts'] > 0, df['spkts'], 1)) <= 1, True)\"],\"features\":[\"smean\",\"sbytes\",\"spkts\"],\"rationale\":\"The source mean packet size is the source byte total divided by its packet count, allowing for integer rounding or truncation.\"},{\"id\":\"R6\",\"category\":\"math\",\"alternatives\":[\"np.where(df['dpkts'] > 0, np.abs(df['dmean'] - df['dbytes'] / np.where(df['dpkts'] > 0, df['dpkts'], 1)) <= 1, True)\"],\"features\":[\"dmean\",\"dbytes\",\"dpkts\"],\"rationale\":\"The destination mean packet size is the destination byte total divided by its packet count, allowing for integer rounding or truncation.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 3435,
+   "prompt_tokens": 1956,
+   "cost_usd": 0.00173733,
+   "seconds": 33.4
+  }
+ ]
+}

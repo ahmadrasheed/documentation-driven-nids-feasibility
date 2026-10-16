@@ -1,0 +1,14 @@
+{
+ "model": "deepseek/deepseek-v4-pro-0813",
+ "text": "{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"(df['NUM_PKTS_UP_TO_128_BYTES'] + df['NUM_PKTS_128_TO_256_BYTES'] + df['NUM_PKTS_256_TO_512_BYTES'] + df['NUM_PKTS_512_TO_1024_BYTES'] + df['NUM_PKTS_1024_TO_1514_BYTES']) == (df['IN_PKTS'] + df['OUT_PKTS'])\",\n        \"(df['NUM_PKTS_UP_TO_128_BYTES'] + df['NUM_PKTS_128_TO_256_BYTES'] + df['NUM_PKTS_256_TO_512_BYTES'] + df['NUM_PKTS_512_TO_1024_BYTES'] + df['NUM_PKTS_1024_TO_1514_BYTES']) <= (df['IN_PKTS'] + df['OUT_PKTS'])\"\n      ],\n      \"features\": [\n        \"NUM_PKTS_UP_TO_128_BYTES\",\n        \"NUM_PKTS_128_TO_256_BYTES\",\n        \"NUM_PKTS_256_TO_512_BYTES\",\n        \"NUM_PKTS_512_TO_1024_BYTES\",\n        \"NUM_PKTS_1024_TO_1514_BYTES\",\n        \"IN_PKTS\",\n        \"OUT_PKTS\"\n      ],\n      \"rationale\": \"The sum of packet counts across all size categories should equal total packets if no packets exceed 1514 bytes, otherwise it should be less than or equal to total packets.\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['RETRANSMITTED_IN_PKTS'] <= df['IN_PKTS']\"\n      ],\n      \"features\": [\n        \"RETRANSMITTED_IN_PKTS\",\n        \"IN_PKTS\"\n      ],\n      \"rationale\": \"Retransmitted packets in the src->dst direction are a subset of all packets in that direction.\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['RETRANSMITTED_OUT_PKTS'] <= df['OUT_PKTS']\"\n      ],\n      \"features\": [\n        \"RETRANSMITTED_OUT_PKTS\",\n        \"OUT_PKTS\"\n      ],\n      \"rationale\": \"Retransmitted packets in the dst->src direction are a subset of all packets in that direction.\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['RETRANSMITTED_IN_BYTES'] <= df['IN_BYTES']\"\n      ],\n      \"features\": [\n        \"RETRANSMITTED_IN_BYTES\",\n        \"IN_BYTES\"\n      ],\n      \"rationale\": \"Retransmitted bytes in the src->dst direction are a subset of all bytes in that direction.\"\n    },\n    {\n      \"id\": \"R5\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['RETRANSMITTED_OUT_BYTES'] <= df['OUT_BYTES']\"\n      ],\n      \"features\": [\n        \"RETRANSMITTED_OUT_BYTES\",\n        \"OUT_BYTES\"\n      ],\n      \"rationale\": \"Retransmitted bytes in the dst->src direction are a subset of all bytes in that direction.\"\n    }\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "DeepInfra",
+   "finish_reason": "stop",
+   "completion_tokens": 3409,
+   "prompt_tokens": 2071,
+   "cost_usd": 0.0094053,
+   "seconds": 52.0
+  }
+ ]
+}

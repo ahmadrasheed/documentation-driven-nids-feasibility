@@ -1,0 +1,766 @@
+[
+  {
+    "file": ".gitignore",
+    "size_bytes": 148
+  },
+  {
+    "file": "README.md",
+    "size_bytes": 1879
+  },
+  {
+    "file": "constraints/cbad_reimplementation.json",
+    "size_bytes": 1488
+  },
+  {
+    "file": "constraints/nf_template_miner_hard.json",
+    "size_bytes": 450344
+  },
+  {
+    "file": "constraints/unsw_constraint_sets.json",
+    "size_bytes": 208039
+  },
+  {
+    "file": "documentation/README.md",
+    "size_bytes": 531
+  },
+  {
+    "file": "documentation/unsw_feature_docs.csv",
+    "size_bytes": 3999
+  },
+  {
+    "file": "figures/fig1_pipeline.pdf",
+    "size_bytes": 19936
+  },
+  {
+    "file": "figures/fig1_pipeline.png",
+    "size_bytes": 316152
+  },
+  {
+    "file": "figures/fig1_pipeline.tiff",
+    "size_bytes": 464288
+  },
+  {
+    "file": "figures/fig2_cbad.pdf",
+    "size_bytes": 16336
+  },
+  {
+    "file": "figures/fig2_cbad.png",
+    "size_bytes": 255387
+  },
+  {
+    "file": "figures/fig2_cbad.tiff",
+    "size_bytes": 675494
+  },
+  {
+    "file": "figures/fig3_funnel.pdf",
+    "size_bytes": 11089
+  },
+  {
+    "file": "figures/fig3_funnel.png",
+    "size_bytes": 146321
+  },
+  {
+    "file": "figures/fig3_funnel.tiff",
+    "size_bytes": 273120
+  },
+  {
+    "file": "figures/fig4_transfer_fpr.pdf",
+    "size_bytes": 14127
+  },
+  {
+    "file": "figures/fig4_transfer_fpr.png",
+    "size_bytes": 208635
+  },
+  {
+    "file": "figures/fig4_transfer_fpr.tiff",
+    "size_bytes": 423694
+  },
+  {
+    "file": "figures/fig5_adaptive_attackers.pdf",
+    "size_bytes": 11928
+  },
+  {
+    "file": "figures/fig5_adaptive_attackers.png",
+    "size_bytes": 216294
+  },
+  {
+    "file": "figures/fig5_adaptive_attackers.tiff",
+    "size_bytes": 484874
+  },
+  {
+    "file": "figures/fig6_threshold_sensitivity.pdf",
+    "size_bytes": 11388
+  },
+  {
+    "file": "figures/fig6_threshold_sensitivity.png",
+    "size_bytes": 214398
+  },
+  {
+    "file": "figures/fig6_threshold_sensitivity.tiff",
+    "size_bytes": 341922
+  },
+  {
+    "file": "llm_logs/README.md",
+    "size_bytes": 386
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r1__count_semantics.json",
+    "size_bytes": 7773
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r1__definition.json",
+    "size_bytes": 8092
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r1__math.json",
+    "size_bytes": 6366
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r1__protocol.json",
+    "size_bytes": 5585
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r2__count_semantics.json",
+    "size_bytes": 3224
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r2__definition.json",
+    "size_bytes": 10590
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r2__math.json",
+    "size_bytes": 7784
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r2__protocol.json",
+    "size_bytes": 1515
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r3__count_semantics.json",
+    "size_bytes": 2882
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r3__definition.json",
+    "size_bytes": 9084
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r3__math.json",
+    "size_bytes": 11462
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r3__protocol.json",
+    "size_bytes": 2391
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r4__count_semantics.json",
+    "size_bytes": 2473
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r4__definition.json",
+    "size_bytes": 7353
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r4__math.json",
+    "size_bytes": 8127
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r4__protocol.json",
+    "size_bytes": 2056
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r5__count_semantics.json",
+    "size_bytes": 2098
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r5__definition.json",
+    "size_bytes": 8032
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r5__math.json",
+    "size_bytes": 8562
+  },
+  {
+    "file": "llm_logs/nf__deepseek_deepseek_v4_pro_0813__r5__protocol.json",
+    "size_bytes": 3772
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r1__count_semantics.json",
+    "size_bytes": 1267
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r1__definition.json",
+    "size_bytes": 7009
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r1__math.json",
+    "size_bytes": 10123
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r1__protocol.json",
+    "size_bytes": 1614
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r2__count_semantics.json",
+    "size_bytes": 1314
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r2__definition.json",
+    "size_bytes": 5558
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r2__math.json",
+    "size_bytes": 6373
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r2__protocol.json",
+    "size_bytes": 1827
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r3__count_semantics.json",
+    "size_bytes": 1255
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r3__definition.json",
+    "size_bytes": 5807
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r3__math.json",
+    "size_bytes": 3547
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r3__protocol.json",
+    "size_bytes": 1385
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r4__count_semantics.json",
+    "size_bytes": 1287
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r4__definition.json",
+    "size_bytes": 9339
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r4__math.json",
+    "size_bytes": 8165
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r4__protocol.json",
+    "size_bytes": 1718
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r5__count_semantics.json",
+    "size_bytes": 2119
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r5__definition.json",
+    "size_bytes": 6407
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r5__math.json",
+    "size_bytes": 7530
+  },
+  {
+    "file": "llm_logs/nf__openai_gpt_6_luna__r5__protocol.json",
+    "size_bytes": 1852
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r1__count_semantics.json",
+    "size_bytes": 3896
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r1__definition.json",
+    "size_bytes": 6048
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r1__math.json",
+    "size_bytes": 5801
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r1__protocol.json",
+    "size_bytes": 2801
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r2__count_semantics.json",
+    "size_bytes": 3619
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r2__definition.json",
+    "size_bytes": 7732
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r2__math.json",
+    "size_bytes": 6953
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r2__protocol.json",
+    "size_bytes": 2758
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r3__count_semantics.json",
+    "size_bytes": 3896
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r3__definition.json",
+    "size_bytes": 12804
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r3__math.json",
+    "size_bytes": 6979
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r3__protocol.json",
+    "size_bytes": 2788
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r4__count_semantics.json",
+    "size_bytes": 3314
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r4__definition.json",
+    "size_bytes": 9668
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r4__math.json",
+    "size_bytes": 5690
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r4__protocol.json",
+    "size_bytes": 2789
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r5__count_semantics.json",
+    "size_bytes": 3314
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r5__definition.json",
+    "size_bytes": 9952
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r5__math.json",
+    "size_bytes": 4239
+  },
+  {
+    "file": "llm_logs/nf__qwen_qwen3_8_27b__r5__protocol.json",
+    "size_bytes": 3408
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r1__count_semantics.json",
+    "size_bytes": 2484
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r1__definition.json",
+    "size_bytes": 5755
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r1__math.json",
+    "size_bytes": 4967
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r1__protocol.json",
+    "size_bytes": 1537
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r2__count_semantics.json",
+    "size_bytes": 2485
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r2__definition.json",
+    "size_bytes": 4537
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r2__math.json",
+    "size_bytes": 4708
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r2__protocol.json",
+    "size_bytes": 2048
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r3__count_semantics.json",
+    "size_bytes": 57999
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r3__definition.json",
+    "size_bytes": 4300
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r3__math.json",
+    "size_bytes": 4518
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r3__protocol.json",
+    "size_bytes": 2022
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r4__count_semantics.json",
+    "size_bytes": 2901
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r4__definition.json",
+    "size_bytes": 6443
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r4__math.json",
+    "size_bytes": 3794
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r4__protocol.json",
+    "size_bytes": 2530
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r5__count_semantics.json",
+    "size_bytes": 3163
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r5__definition.json",
+    "size_bytes": 5724
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r5__math.json",
+    "size_bytes": 4359
+  },
+  {
+    "file": "llm_logs/unsw__deepseek_deepseek_v4_pro_0813__r5__protocol.json",
+    "size_bytes": 2907
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r1__count_semantics.json",
+    "size_bytes": 1752
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r1__definition.json",
+    "size_bytes": 3646
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r1__math.json",
+    "size_bytes": 265
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r1__protocol.json",
+    "size_bytes": 1062
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r2__count_semantics.json",
+    "size_bytes": 2353
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r2__definition.json",
+    "size_bytes": 4442
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r2__math.json",
+    "size_bytes": 2750
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r2__protocol.json",
+    "size_bytes": 1450
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r3__count_semantics.json",
+    "size_bytes": 2073
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r3__definition.json",
+    "size_bytes": 3897
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r3__math.json",
+    "size_bytes": 2706
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r3__protocol.json",
+    "size_bytes": 1905
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r4__count_semantics.json",
+    "size_bytes": 2045
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r4__definition.json",
+    "size_bytes": 4851
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r4__math.json",
+    "size_bytes": 3924
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r4__protocol.json",
+    "size_bytes": 1978
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r5__count_semantics.json",
+    "size_bytes": 2057
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r5__definition.json",
+    "size_bytes": 4421
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r5__math.json",
+    "size_bytes": 3618
+  },
+  {
+    "file": "llm_logs/unsw__openai_gpt_6_luna__r5__protocol.json",
+    "size_bytes": 1745
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r1__count_semantics.json",
+    "size_bytes": 3986
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r1__definition.json",
+    "size_bytes": 18874
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r1__math.json",
+    "size_bytes": 2448
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r1__protocol.json",
+    "size_bytes": 3543
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r2__count_semantics.json",
+    "size_bytes": 5864
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r2__definition.json",
+    "size_bytes": 4796
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r2__math.json",
+    "size_bytes": 24104
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r2__protocol.json",
+    "size_bytes": 7496
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r3__count_semantics.json",
+    "size_bytes": 7134
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r3__definition.json",
+    "size_bytes": 6919
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r3__math.json",
+    "size_bytes": 3106
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r3__protocol.json",
+    "size_bytes": 5149
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r4__count_semantics.json",
+    "size_bytes": 2900
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r4__definition.json",
+    "size_bytes": 4624
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r4__math.json",
+    "size_bytes": 23391
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r4__protocol.json",
+    "size_bytes": 2808
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r5__count_semantics.json",
+    "size_bytes": 2548
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r5__definition.json",
+    "size_bytes": 4942
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r5__math.json",
+    "size_bytes": 17274
+  },
+  {
+    "file": "llm_logs/unsw__qwen_qwen3_8_27b__r5__protocol.json",
+    "size_bytes": 2818
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r1__count_semantics.json",
+    "size_bytes": 2326
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r1__definition.json",
+    "size_bytes": 5166
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r1__math.json",
+    "size_bytes": 3204
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r1__protocol.json",
+    "size_bytes": 2099
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r2__count_semantics.json",
+    "size_bytes": 2316
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r2__definition.json",
+    "size_bytes": 5402
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r2__math.json",
+    "size_bytes": 4540
+  },
+  {
+    "file": "llm_logs/unsw_obf__deepseek_deepseek_v4_pro_0813__r2__protocol.json",
+    "size_bytes": 3171
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r1__count_semantics.json",
+    "size_bytes": 2336
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r1__definition.json",
+    "size_bytes": 4785
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r1__math.json",
+    "size_bytes": 263
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r1__protocol.json",
+    "size_bytes": 1316
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r2__count_semantics.json",
+    "size_bytes": 1891
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r2__definition.json",
+    "size_bytes": 3895
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r2__math.json",
+    "size_bytes": 262
+  },
+  {
+    "file": "llm_logs/unsw_obf__openai_gpt_6_luna__r2__protocol.json",
+    "size_bytes": 1314
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r1__count_semantics.json",
+    "size_bytes": 8366
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r1__definition.json",
+    "size_bytes": 4590
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r1__math.json",
+    "size_bytes": 4490
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r1__protocol.json",
+    "size_bytes": 4656
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r2__count_semantics.json",
+    "size_bytes": 902
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r2__definition.json",
+    "size_bytes": 5767
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r2__math.json",
+    "size_bytes": 4222
+  },
+  {
+    "file": "llm_logs/unsw_obf__qwen_qwen3_8_27b__r2__protocol.json",
+    "size_bytes": 4399
+  },
+  {
+    "file": "metadata/experimental_settings.txt",
+    "size_bytes": 373
+  },
+  {
+    "file": "metadata/llm_models.txt",
+    "size_bytes": 343
+  },
+  {
+    "file": "prompts/constraint_extraction_prompt_template.txt",
+    "size_bytes": 1755
+  },
+  {
+    "file": "prompts/system_prompt.txt",
+    "size_bytes": 103
+  },
+  {
+    "file": "results/artifacts/unsw_adv_sets.npz",
+    "size_bytes": 375321
+  },
+  {
+    "file": "results/artifacts/unsw_meta.json",
+    "size_bytes": 1764
+  },
+  {
+    "file": "results/artifacts/unsw_prep.npz",
+    "size_bytes": 6445947
+  },
+  {
+    "file": "results/tables/fig2_cbad_eps_protocol.csv",
+    "size_bytes": 301
+  },
+  {
+    "file": "results/tables/nf_llm_runs.csv",
+    "size_bytes": 913
+  },
+  {
+    "file": "results/tables/table10_cost.csv",
+    "size_bytes": 498
+  },
+  {
+    "file": "results/tables/table3_cbad_attacks.csv",
+    "size_bytes": 581
+  },
+  {
+    "file": "results/tables/table4_soft_transfer.csv",
+    "size_bytes": 480
+  },
+  {
+    "file": "results/tables/table5_transfer_detail.csv",
+    "size_bytes": 1503
+  },
+  {
+    "file": "results/tables/table5_transfer_summary.csv",
+    "size_bytes": 458
+  },
+  {
+    "file": "results/tables/table6_cross_validity.csv",
+    "size_bytes": 735
+  },
+  {
+    "file": "results/tables/table6_seeds_detail.csv",
+    "size_bytes": 2033
+  },
+  {
+    "file": "results/tables/table6_seeds_summary.csv",
+    "size_bytes": 544
+  },
+  {
+    "file": "results/tables/table7_ablation_detail.csv",
+    "size_bytes": 9241
+  },
+  {
+    "file": "results/tables/table7_ablation_summary.csv",
+    "size_bytes": 493
+  },
+  {
+    "file": "results/tables/table8_sensitivity.csv",
+    "size_bytes": 802
+  },
+  {
+    "file": "results/tables/table9_contamination_probe.csv",
+    "size_bytes": 578
+  }
+]

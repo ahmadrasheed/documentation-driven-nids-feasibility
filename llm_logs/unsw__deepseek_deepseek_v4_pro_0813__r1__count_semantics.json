@@ -1,0 +1,14 @@
+{
+ "model": "deepseek/deepseek-v4-pro-0813",
+ "text": "{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['ct_dst_src_ltm'] <= df['ct_src_ltm']\"\n      ],\n      \"features\": [\"ct_dst_src_ltm\", \"ct_src_ltm\"],\n      \"rationale\": \"Connections with same source and destination address are a subset of connections with same source address.\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['ct_dst_src_ltm'] <= df['ct_dst_ltm']\"\n      ],\n      \"features\": [\"ct_dst_src_ltm\", \"ct_dst_ltm\"],\n      \"rationale\": \"Connections with same source and destination address are a subset of connections with same destination address.\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['ct_src_dport_ltm'] <= df['ct_src_ltm']\"\n      ],\n      \"features\": [\"ct_src_dport_ltm\", \"ct_src_ltm\"],\n      \"rationale\": \"Connections with same source address and destination port are a subset of connections with same source address.\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['ct_dst_sport_ltm'] <= df['ct_dst_ltm']\"\n      ],\n      \"features\": [\"ct_dst_sport_ltm\", \"ct_dst_ltm\"],\n      \"rationale\": \"Connections with same destination address and source port are a subset of connections with same destination address.\"\n    },\n    {\n      \"id\": \"R5\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['ct_srv_src'] <= df['ct_src_ltm']\"\n      ],\n      \"features\": [\"ct_srv_src\", \"ct_src_ltm\"],\n      \"rationale\": \"Connections with same service and source address are a subset of connections with same source address.\"\n    },\n    {\n      \"id\": \"R6\",\n      \"category\": \"count_semantics\",\n      \"alternatives\": [\n        \"df['ct_srv_dst'] <= df['ct_dst_ltm']\"\n      ],\n      \"features\": [\"ct_srv_dst\", \"ct_dst_ltm\"],\n      \"rationale\": \"Connections with same service and destination address are a subset of connections with same destination address.\"\n    }\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "DeepInfra",
+   "finish_reason": "stop",
+   "completion_tokens": 2655,
+   "prompt_tokens": 2058,
+   "cost_usd": 0.007428,
+   "seconds": 24.0
+  }
+ ]
+}

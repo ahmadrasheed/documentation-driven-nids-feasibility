@@ -1,0 +1,14 @@
+{
+ "model": "deepseek/deepseek-v4-pro-0813",
+ "text": "{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['PROTOCOL'] == 6) | ((df['TCP_FLAGS'] == 0) & (df['CLIENT_TCP_FLAGS'] == 0) & (df['SERVER_TCP_FLAGS'] == 0) & (df['RETRANSMITTED_IN_BYTES'] == 0) & (df['RETRANSMITTED_IN_PKTS'] == 0) & (df['RETRANSMITTED_OUT_BYTES'] == 0) & (df['RETRANSMITTED_OUT_PKTS'] == 0) & (df['TCP_WIN_MAX_IN'] == 0) & (df['TCP_WIN_MAX_OUT'] == 0))\"\n      ],\n      \"features\": [\n        \"PROTOCOL\",\n        \"TCP_FLAGS\",\n        \"CLIENT_TCP_FLAGS\",\n        \"SERVER_TCP_FLAGS\",\n        \"RETRANSMITTED_IN_BYTES\",\n        \"RETRANSMITTED_IN_PKTS\",\n        \"RETRANSMITTED_OUT_BYTES\",\n        \"RETRANSMITTED_OUT_PKTS\",\n        \"TCP_WIN_MAX_IN\",\n        \"TCP_WIN_MAX_OUT\"\n      ],\n      \"rationale\": \"TCP-specific features must be zero for non-TCP flows.\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['PROTOCOL'] == 1) | ((df['ICMP_TYPE'] == 0) & (df['ICMP_IPV4_TYPE'] == 0))\"\n      ],\n      \"features\": [\n        \"PROTOCOL\",\n        \"ICMP_TYPE\",\n        \"ICMP_IPV4_TYPE\"\n      ],\n      \"rationale\": \"ICMP-specific features must be zero for non-ICMP flows.\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['PROTOCOL'].isin([6, 17])) | ((df['DNS_QUERY_ID'] == 0) & (df['DNS_QUERY_TYPE'] == 0) & (df['DNS_TTL_ANSWER'] == 0))\"\n      ],\n      \"features\": [\n        \"PROTOCOL\",\n        \"DNS_QUERY_ID\",\n        \"DNS_QUERY_TYPE\",\n        \"DNS_TTL_ANSWER\"\n      ],\n      \"rationale\": \"DNS-specific features must be zero for flows not using TCP or UDP.\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['PROTOCOL'] == 6) | (df['FTP_COMMAND_RET_CODE'] == 0)\"\n      ],\n      \"features\": [\n        \"PROTOCOL\",\n        \"FTP_COMMAND_RET_CODE\"\n      ],\n      \"rationale\": \"FTP command return code must be zero for non-TCP flows.\"\n    }\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "DeepInfra",
+   "finish_reason": "stop",
+   "completion_tokens": 3286,
+   "prompt_tokens": 2068,
+   "cost_usd": 0.011232,
+   "seconds": 42.6
+  }
+ ]
+}

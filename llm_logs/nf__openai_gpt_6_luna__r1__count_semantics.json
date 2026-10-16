@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"count_semantics\",\"alternatives\":[\"df['RETRANSMITTED_IN_PKTS'] + df['RETRANSMITTED_OUT_PKTS'] <= df['IN_PKTS'] + df['OUT_PKTS']\"],\"features\":[\"RETRANSMITTED_IN_PKTS\",\"RETRANSMITTED_OUT_PKTS\",\"IN_PKTS\",\"OUT_PKTS\"],\"rationale\":\"Retransmitted packets are a subset of the packets counted in the flow, regardless of direction mapping.\"},{\"id\":\"R2\",\"category\":\"count_semantics\",\"alternatives\":[\"df['NUM_PKTS_UP_TO_128_BYTES'] + df['NUM_PKTS_128_TO_256_BYTES'] + df['NUM_PKTS_256_TO_512_BYTES'] + df['NUM_PKTS_512_TO_1024_BYTES'] + df['NUM_PKTS_1024_TO_1514_BYTES'] <= df['IN_PKTS'] + df['OUT_PKTS']\"],\"features\":[\"NUM_PKTS_UP_TO_128_BYTES\",\"NUM_PKTS_128_TO_256_BYTES\",\"NUM_PKTS_256_TO_512_BYTES\",\"NUM_PKTS_512_TO_1024_BYTES\",\"NUM_PKTS_1024_TO_1514_BYTES\",\"IN_PKTS\",\"OUT_PKTS\"],\"rationale\":\"The disjoint packet-size buckets count packets from the flow, while packets larger than 1514 bytes need not be represented in any bucket.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 1123,
+   "prompt_tokens": 1877,
+   "cost_usd": 0.00079605,
+   "seconds": 12.5
+  }
+ ]
+}

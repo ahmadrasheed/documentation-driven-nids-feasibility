@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"math\",\"alternatives\":[\"(df['dur'] == 0) | np.isclose(df['sload'], df['sbytes'] * 8 / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8)\"],\"features\":[\"dur\",\"sbytes\",\"sload\"],\"rationale\":\"Source load is the source byte count converted to bits and divided by flow duration in seconds.\"},{\"id\":\"R2\",\"category\":\"math\",\"alternatives\":[\"(df['dur'] == 0) | np.isclose(df['dload'], df['dbytes'] * 8 / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8)\"],\"features\":[\"dur\",\"dbytes\",\"dload\"],\"rationale\":\"Destination load is the destination byte count converted to bits and divided by flow duration in seconds.\"},{\"id\":\"R3\",\"category\":\"math\",\"alternatives\":[\"(df['spkts'] == 0) | (np.abs(df['smean'] - df['sbytes'] / np.where(df['spkts'] != 0, df['spkts'], 1)) <= 1)\"],\"features\":[\"sbytes\",\"spkts\",\"smean\"],\"rationale\":\"When source packets exist, their integer mean size must agree with total source bytes per packet to within integer rounding.\"},{\"id\":\"R4\",\"category\":\"math\",\"alternatives\":[\"(df['dpkts'] == 0) | (np.abs(df['dmean'] - df['dbytes'] / np.where(df['dpkts'] != 0, df['dpkts'], 1)) <= 1)\"],\"features\":[\"dbytes\",\"dpkts\",\"dmean\"],\"rationale\":\"When destination packets exist, their integer mean size must agree with total destination bytes per packet to within integer rounding.\"},{\"id\":\"R5\",\"category\":\"math\",\"alternatives\":[\"(df['proto'] != 'tcp') | np.isclose(df['tcprtt'], df['synack'] + df['ackdat'], rtol=1e-5, atol=1e-8)\"],\"features\":[\"proto\",\"tcprtt\",\"synack\",\"ackdat\"],\"rationale\":\"For TCP, the documented connection setup round-trip time is the sum of the SYN-to-SYN-ACK and SYN-ACK-to-ACK times.\"},{\"id\":\"R6\",\"category\":\"math\",\"alternatives\":[\"(df['dur'] == 0) | np.isclose(df['rate'], (df['spkts'] + df['dpkts']) / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8)\",\"(df['dur'] == 0) | np.isclose(df['rate'], (df['spkts'] + df['dpkts'] - 1) / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8)\",\"(df['dur'] == 0) | np.isclose(df['rate'], 1 / np.where(df['dur'] != 0, df['dur'], 1), rtol=1e-5, atol=1e-8)\"],\"features\":[\"rate\",\"dur\",\"spkts\",\"dpkts\"],\"rationale\":\"Because rate is undocumented, these alternatives cover plausible packet-throughput, interval-adjusted packet-rate, and connection-rate definitions.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 3443,
+   "prompt_tokens": 1956,
+   "cost_usd": 0.00174133,
+   "seconds": 36.9
+  }
+ ]
+}

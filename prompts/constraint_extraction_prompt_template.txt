@@ -1,0 +1,29 @@
+Below is the official feature documentation of a network flow dataset, followed by the exact schema of the CSV file we use.
+
+TASK: derive HARD constraints that every valid flow record must satisfy in ANY network, for benign and malicious traffic alike.
+Work systematically, feature by feature, through these four kinds of relations:
+  1. definition: a feature defined from other features (sums, differences, means, rates, loads, ratios);
+  2. protocol: a feature that only exists, or must take specific values, for certain protocols or connection states;
+  3. count_semantics: logical relations among count features implied by their definitions;
+  4. math: arithmetic or statistical relations between several features that must always hold.
+Do NOT output single-feature range or non-negativity bounds (they are handled separately).
+Do NOT output statistical tendencies or typical values.
+When a definition is ambiguous (units, scaling factors, off-by-one, which packets are counted), list ALL plausible alternatives
+as separate expressions; each will be tested against real data and only the consistent ones will be kept.
+
+Also return "type_map": for EVERY schema column, its type according to the documentation: integer, float, binary, or nominal.
+
+OUTPUT FORMAT (JSON only, no markdown):
+{"type_map": {"col": "integer|float|binary|nominal"},
+  "constraints": [{"id": "R1", "category": "definition|protocol|count_semantics|math",
+     "alternatives": ["<vectorized Python boolean expression over a pandas DataFrame named df, using df['col'], np, &, |, ~; True when SATISFIED>"],
+     "features": ["col1", "col2"], "rationale": "<one sentence>"}]}
+
+RULES:
+{DATASET_SPECIFIC_NOTES}
+
+DOCUMENTATION:
+{FEATURE_DOCUMENTATION}
+
+SCHEMA (column: dtype):
+{SCHEMA}

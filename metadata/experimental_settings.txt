@@ -1,0 +1,25 @@
+Core experimental settings
+
+Random seed:
+42
+
+Falsification threshold:
+0.001
+
+Vacuity threshold:
+0.001
+
+Random records for vacuity testing:
+20000
+
+LLM repetitions per model:
+5
+
+Adaptive PGD:
+epsilon = 0.25
+step size = 0.01
+iterations = 35
+
+Important:
+The released constraints represent feature-space feasibility hypotheses.
+They do not establish packet-level realizability.

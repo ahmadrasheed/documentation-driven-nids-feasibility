@@ -1,0 +1,14 @@
+{
+ "model": "openai/gpt-6-luna",
+ "text": "{\"type_map\":{},\"constraints\":[{\"id\":\"R1\",\"category\":\"protocol\",\"alternatives\":[\"(df['proto'] == 'tcp') | ((df['swin'] == 0) & (df['dwin'] == 0) & (df['stcpb'] == 0) & (df['dtcpb'] == 0) & (df['tcprtt'] == 0) & (df['synack'] == 0) & (df['ackdat'] == 0))\"],\"features\":[\"proto\",\"swin\",\"dwin\",\"stcpb\",\"dtcpb\",\"tcprtt\",\"synack\",\"ackdat\"],\"rationale\":\"TCP window, sequence-number, and connection-setup timing fields are inapplicable to non-TCP flows and are represented as zero.\"},{\"id\":\"R2\",\"category\":\"protocol\",\"alternatives\":[\"(~df['state'].isin(['ECO', 'ECR', 'URH', 'URN'])) | (df['proto'] == 'icmp')\"],\"features\":[\"state\",\"proto\"],\"rationale\":\"Echo and unreachable state labels describe ICMP exchanges.\"},{\"id\":\"R3\",\"category\":\"protocol\",\"alternatives\":[\"(df['service'] == 'http') | ((df['trans_depth'] == 0) & (df['response_body_len'] == 0))\"],\"features\":[\"service\",\"trans_depth\",\"response_body_len\"],\"rationale\":\"HTTP transaction depth and HTTP response-body length are inapplicable to flows not identified as HTTP service.\"},{\"id\":\"R4\",\"category\":\"protocol\",\"alternatives\":[\"(df['is_ftp_login'] != 1) | ((df['service'] == 'ftp') & (df['proto'] == 'tcp'))\"],\"features\":[\"is_ftp_login\",\"service\",\"proto\"],\"rationale\":\"A successful FTP-login indicator requires an FTP session, which uses TCP.\"},{\"id\":\"R5\",\"category\":\"protocol\",\"alternatives\":[\"(df['ct_ftp_cmd'] == 0) | ((df['service'] == 'ftp') & (df['proto'] == 'tcp'))\"],\"features\":[\"ct_ftp_cmd\",\"service\",\"proto\"],\"rationale\":\"FTP command counts require an FTP session, which uses TCP.\"}]}",
+ "attempts": [
+  {
+   "provider": "OpenAI",
+   "finish_reason": "stop",
+   "completion_tokens": 2352,
+   "prompt_tokens": 1956,
+   "cost_usd": 0.00119583,
+   "seconds": 24.6
+  }
+ ]
+}

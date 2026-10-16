@@ -1,0 +1,14 @@
+{
+ "model": "deepseek/deepseek-v4-pro-0813",
+ "text": "{\n  \"type_map\": {},\n  \"constraints\": [\n    {\n      \"id\": \"R1\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['f02'] == 'tcp') | ((df['f20'] == 0) & (df['f21'] == 0) & (df['f22'] == 0) & (df['f23'] == 0) & (df['f24'] == 0) & (df['f25'] == 0) & (df['f26'] == 0))\"\n      ],\n      \"features\": [\"f02\", \"f20\", \"f21\", \"f22\", \"f23\", \"f24\", \"f25\", \"f26\"],\n      \"rationale\": \"TCP-specific fields should be zero for non-TCP flows.\"\n    },\n    {\n      \"id\": \"R2\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['f02'] == 'tcp') | ((df['f14'] == 0) & (df['f15'] == 0))\",\n        \"True\"\n      ],\n      \"features\": [\"f02\", \"f14\", \"f15\"],\n      \"rationale\": \"Retransmissions are TCP-specific, but dropped packets may occur in any protocol.\"\n    },\n    {\n      \"id\": \"R3\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['f03'] == 'http') | ((df['f29'] == 0) & (df['f30'] == 0) & (df['f39'] == 0))\"\n      ],\n      \"features\": [\"f03\", \"f29\", \"f30\", \"f39\"],\n      \"rationale\": \"HTTP-specific fields should be zero for non-HTTP flows.\"\n    },\n    {\n      \"id\": \"R4\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['f03'] == 'ftp') | ((df['f37'] == 0) & (df['f38'] == 0))\"\n      ],\n      \"features\": [\"f03\", \"f37\", \"f38\"],\n      \"rationale\": \"FTP-specific fields should be zero for non-FTP flows.\"\n    },\n    {\n      \"id\": \"R5\",\n      \"category\": \"protocol\",\n      \"alternatives\": [\n        \"(df['f02'] != 'udp') | (~df['f03'].isin(['http', 'ftp', 'smtp', 'ssh', 'ftp-data', 'irc']))\"\n      ],\n      \"features\": [\"f02\", \"f03\"],\n      \"rationale\": \"UDP does not support TCP-based application protocols.\"\n    }\n  ]\n}",
+ "attempts": [
+  {
+   "provider": "Wafer",
+   "finish_reason": "stop",
+   "completion_tokens": 4203,
+   "prompt_tokens": 1898,
+   "cost_usd": 0.0213577,
+   "seconds": 150.1
+  }
+ ]
+}
