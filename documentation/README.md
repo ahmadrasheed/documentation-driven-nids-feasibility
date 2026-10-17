@@ -15,3 +15,10 @@ be documented in the accompanying paper and repository README.
 
 `unsw_feature_docs.csv` is included because it is part of the
 documentation input used by the constraint-extraction procedure.
+
+## NetFlow-v3 feature documentation
+
+`netflow_v3_feature_documentation.txt` contains the exact NetFlow-v3
+feature-documentation text embedded in the experimental notebook and
+used as input to the LLM constraint-extraction stage.
+

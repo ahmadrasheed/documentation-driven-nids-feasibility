@@ -1,0 +1,248 @@
+{
+  "name": "Documentation-and-literature reference set",
+  "dataset": "UNSW-NB15",
+  "original_artifact_key": "Reference (published)",
+  "note": "This file is extracted directly from the original experimental artifact unsw_constraint_sets.json. The original key is preserved for reproducibility. In the paper, this set is referred to as the documentation-and-literature reference set.",
+  "constraints": [
+    {
+      "id": "REF.INT.sbytes",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['sbytes'], np.round(df['sbytes']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.dbytes",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['dbytes'], np.round(df['dbytes']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.sttl",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['sttl'], np.round(df['sttl']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.dttl",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['dttl'], np.round(df['dttl']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.sloss",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['sloss'], np.round(df['sloss']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.dloss",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['dloss'], np.round(df['dloss']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.spkts",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['spkts'], np.round(df['spkts']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.dpkts",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['dpkts'], np.round(df['dpkts']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.swin",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['swin'], np.round(df['swin']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.dwin",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['dwin'], np.round(df['dwin']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.stcpb",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['stcpb'], np.round(df['stcpb']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.dtcpb",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['dtcpb'], np.round(df['dtcpb']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.smean",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['smean'], np.round(df['smean']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.dmean",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['dmean'], np.round(df['dmean']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.trans_depth",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['trans_depth'], np.round(df['trans_depth']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.response_body_len",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['response_body_len'], np.round(df['response_body_len']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_state_ttl",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_state_ttl'], np.round(df['ct_state_ttl']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_flw_http_mthd",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_flw_http_mthd'], np.round(df['ct_flw_http_mthd']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_ftp_cmd",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_ftp_cmd'], np.round(df['ct_ftp_cmd']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_srv_src",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_srv_src'], np.round(df['ct_srv_src']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_srv_dst",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_srv_dst'], np.round(df['ct_srv_dst']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_dst_ltm",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_dst_ltm'], np.round(df['ct_dst_ltm']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_src_ltm",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_src_ltm'], np.round(df['ct_src_ltm']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_src_dport_ltm",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_src_dport_ltm'], np.round(df['ct_src_dport_ltm']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_dst_sport_ltm",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_dst_sport_ltm'], np.round(df['ct_dst_sport_ltm']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.INT.ct_dst_src_ltm",
+      "rel": "INT",
+      "category": "type",
+      "expression": "np.isclose(df['ct_dst_src_ltm'], np.round(df['ct_dst_src_ltm']), rtol=0, atol=1e-6)"
+    },
+    {
+      "id": "REF.1",
+      "rel": "REF.1",
+      "category": "explicit",
+      "expression": "np.isclose(df['tcprtt'], df['synack'] + df['ackdat'], rtol=1e-6, atol=1e-6)"
+    },
+    {
+      "id": "REF.2",
+      "rel": "REF.2",
+      "category": "explicit",
+      "expression": "df['is_sm_ips_ports'].isin([0, 1])"
+    },
+    {
+      "id": "REF.3",
+      "rel": "REF.3",
+      "category": "explicit",
+      "expression": "df['is_ftp_login'].isin([0, 1])"
+    },
+    {
+      "id": "REF.4",
+      "rel": "REF.4",
+      "category": "explicit",
+      "expression": "(df['sttl'] <= 255) & (df['dttl'] <= 255)"
+    },
+    {
+      "id": "REF.5",
+      "rel": "REF.5",
+      "category": "explicit",
+      "expression": "df['swin'] <= 255"
+    },
+    {
+      "id": "REF.6",
+      "rel": "REF.6",
+      "category": "explicit",
+      "expression": "(df['service'] != 'ssh') | (df['proto'] == 'tcp')"
+    },
+    {
+      "id": "REF.7",
+      "rel": "REF.7",
+      "category": "explicit",
+      "expression": "(df['service'] != 'dns') | df['proto'].isin(['tcp', 'udp'])"
+    },
+    {
+      "id": "REF.8",
+      "rel": "REF.8",
+      "category": "explicit",
+      "expression": "df['ct_srv_src'] <= 100"
+    },
+    {
+      "id": "REF.9",
+      "rel": "REF.9",
+      "category": "explicit",
+      "expression": "df['ct_dst_ltm'] <= 100"
+    },
+    {
+      "id": "REF.10",
+      "rel": "REF.10",
+      "category": "explicit",
+      "expression": "df['ct_src_dport_ltm'] <= 100"
+    },
+    {
+      "id": "REF.11",
+      "rel": "REF.11",
+      "category": "explicit",
+      "expression": "df['ct_dst_sport_ltm'] <= 100"
+    },
+    {
+      "id": "REF.12",
+      "rel": "REF.12",
+      "category": "explicit",
+      "expression": "df['ct_dst_src_ltm'] <= 100"
+    },
+    {
+      "id": "REF.13",
+      "rel": "REF.13",
+      "category": "explicit",
+      "expression": "df['ct_src_ltm'] <= 100"
+    },
+    {
+      "id": "REF.14",
+      "rel": "REF.14",
+      "category": "explicit",
+      "expression": "df['ct_srv_dst'] <= 100"
+    }
+  ]
+}
